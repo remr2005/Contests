@@ -24,7 +24,7 @@
 | [18. Заголовок столбца Excel](./contest_01/18/main.go) |  ![](./img/go.png) |
 | [19. Подходящие Слова](./contest_01/19/main.go) |  ![](./img/go.png) |
 | [20. Анаграмма. 2 числа](./contest_01/20/main.go) |  ![](./img/go.png) |
-
+| ... | ... |
 
 |[Контест 2](https://contest.yandex.ru/contest/52676/problems/) |  |
 | --- | :-: |
@@ -40,6 +40,7 @@
 | [10. Функция. Сдвиг элементов массива](./contest_02/10/main.go) |  ![](./img/go.png) |
 | [11. Функция. Валидатор судоку](./contest_02/11/main.go) |  ![](./img/go.png) |
 | [12. Функция. Сапёр (поле)](./contest_02/12/main.go) |  ![](./img/go.png) |
+| ... | ... |
 
 |[Контест 3](https://contest.yandex.ru/contest/53504/problems/) |  |
 | --- | :-: |
@@ -50,3 +51,4 @@
 | [5. Самое частое слово](./contest_03/05/main.cpp) | ![](./img/cpp.png) |
 | [6. Баланс пользователя](./contest_03/06/main.cpp) | ![](./img/cpp.png) |
 | [7. Какое следующее слово](./contest_03/07/main.cpp) | ![](./img/cpp.png) |
+| ... | ... |
