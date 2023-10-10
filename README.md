@@ -49,3 +49,5 @@
 | [5. Самое частое слово](./contest_03/05/main.cpp) | ![](./img/cpp.png) |
 | [6. Баланс пользователя](./contest_03/06/main.cpp) | ![](./img/cpp.png) |
 | [7. Какое следующее слово](./contest_03/07/main.cpp) | ![](./img/cpp.png) |
+| [8. Уникальное число](./contest_03/08/main.go) | ![](./img/go.png) |
+| [9. Подходящая пара чисел](./contest_03/09/main.go) | ![](./img/go.png) |
