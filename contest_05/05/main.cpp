@@ -1,6 +1,3 @@
-#include <iostream>
-#include <string>
-
 #include<vector>
 #include <algorithm>
 
@@ -62,32 +59,32 @@ public:
     bool operator > (const Bigint& b) const
     {
         if (this->arr == b.arr and this->znak == b.znak)return false;
-        if (this->arr.size() == b.arr.size()) {
+        else if (this->arr.size() == b.arr.size() and !this->znak and !b.znak) {
             for (int i = this->arr.size() - 1; i >= 0;i--) {
                 if (this->arr[i] == b.arr[i]) continue;
                 if (this->arr[i] > b.arr[i]) return true;
                 if (this->arr[i] < b.arr[i]) return false;
             }
         }
-
-        if (this->arr.size() > b.arr.size()) return true;
-        return false;
-    }
-
-    bool operator < (const Bigint& b) const
-    {
-        if (this->arr == b.arr and this->znak == b.znak)return false;
-        if (this->arr.size() == b.arr.size()) {
+        else if (this->arr.size() == b.arr.size() and this->znak and b.znak) {
             for (int i = this->arr.size() - 1; i >= 0;i--) {
                 if (this->arr[i] == b.arr[i]) continue;
                 if (this->arr[i] > b.arr[i]) return false;
                 if (this->arr[i] < b.arr[i]) return true;
             }
         }
-
-        if (this->arr.size() > b.arr.size()) return false;
-        return true;
+        else if (this->znak and !b.znak)return false;
+        else if (!this->znak and b.znak)return true;
+        else if (this->arr.size() > b.arr.size() and !this->znak and !b.znak) return true;
+        return false;
     }
+
+    bool operator < (const Bigint& b) const
+    {   
+        if (*this == b) return false;
+        return !(*this>b);
+    }
+
     bool operator == (const Bigint& b) const
     {
         if (this->arr == b.arr and this->znak == b.znak)return true;
@@ -225,28 +222,3 @@ Bigint operator /(Bigint a, Bigint b) {
     res.str = res.stringfi();
     return res;
 }
-
-int main() {
-    std::string a, b;
-    std::cin >> a >> b;
-
-    Bigint first(a);
-    Bigint second(b);
-
-    std::cout << "a + b = " << (first + second) << std::endl;
-    std::cout << "a - b = " << (first - second) << std::endl;
-    std::cout << "a * b = " << (first * second) << std::endl;
-    std::cout << "a / b = " << (first / second) << std::endl;
-
-    
-    int c;
-    std::cin >> c;
-    Bigint third(c);
-    Bigint zero;
-
-    std::cout << "с > 0 = " << (third > zero) << std::endl;
-    std::cout << "с < 0 = " << (third < zero) << std::endl;
-    std::cout << "с == 0 = " << (third == zero) << std::endl;
-    
-}
-
